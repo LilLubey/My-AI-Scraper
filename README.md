@@ -1,17 +1,33 @@
-Install dulu prerequisite dibawah ini:
-- npm install express axios cheerio puppeteer puppeteer-extra puppeteer-extra-plugin-stealth cors dotenv
+**Langkah-langkah Menjalankan Proyek:**
+Instalasi Dependensi
 
-buka website "platform.deepseek.com" di browser, login, lalu buatlah API key pribadi
-lalu buat file .env dan isi dengan
+Jalankan perintah berikut di terminal untuk menginstal semua library yang dibutuhkan:
 
-"DEEPSEEK_API_KEY=Api_key_disini
-PORT=3000"
+npm install express axios cheerio puppeteer puppeteer-extra puppeteer-extra-plugin-stealth cors dotenv
 
-untuk menjalankan project
+**Membuat API Key DeepSeek**
 
-buka terminal -> ketik "cd src" -> lalu ketik "node server.js" -> buka terminal baru -> 
-ketik "curl -X POST http://localhost:3000/scrape-product \
-  -H "Content-Type: application/json" \
-  -d '{"url":"(link contoh produk eBay)"}'
+- Buka website https://platform.deepseek.com di browser.
+- Login menggunakan akun kamu.
+- Buat API Key pribadi.
 
-dan proyek otomatis menghasilkan output scrape di browser tab baru
+**Konfigurasi File .env**
+
+Buat file .env di root folder proyek, lalu isi dengan format berikut:
+
+DEEPSEEK_API_KEY=masukkan_api_key_di_sini
+PORT=3000
+
+**Menjalankan Proyek**
+
+Buka terminal, lalu jalankan:
+- cd src
+- node server.js
+Buka terminal baru, lalu jalankan perintah berikut untuk melakukan scraping (ganti (link contoh produk eBay) dengan link asli produk):
+
+curl -X POST http://localhost:3000/scrape-product \
+-H "Content-Type: application/json" \
+-d '{"url":"(link contoh produk eBay)"}'
+
+**Hasil**
+Scraper akan otomatis membuka tab browser baru dan menampilkan hasil scrape dari produk tersebut.
