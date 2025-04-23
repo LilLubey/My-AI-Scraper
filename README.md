@@ -9,7 +9,8 @@ PORT=3000"
 
 untuk menjalankan project
 
-buka terminal -> ketik "cd src" -> lalu ketik "node server.js" -> buka terminal baru -> ketik "curl -X POST http://localhost:3000/scrape-product \
+buka terminal -> ketik "cd src" -> lalu ketik "node server.js" -> buka terminal baru -> 
+ketik "curl -X POST http://localhost:3000/scrape-product \
   -H "Content-Type: application/json" \
   -d '{"url":"(link contoh produk eBay)"}'
 
